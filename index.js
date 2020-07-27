@@ -26,7 +26,7 @@ console.log(votingAge >=18)
 function toDogYears(age) {
     return age*7
 }
-console.log(toDogYears(5))
+console.log(toDogYears(5));
 
 
 
