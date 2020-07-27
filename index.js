@@ -1,13 +1,10 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
-
-
-
+const votingAge = 20;
+console.log(votingAge >=18)
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
-
-
 
 
 
@@ -26,7 +23,10 @@
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
-
+function toDogYears(age) {
+    return age*7
+}
+console.log(toDogYears(5))
 
 
 
@@ -46,6 +46,35 @@
 // 2 - 4 months 10% of their body weight
 // 4 - 7 months 5% of their body weight 
 // 7 - 12 months 4% of their body weight
+
+function amountOfFood(weight, age) {
+    let food;
+    if (age >= 1) { // dog is an adult
+        if (weight <= 5) {
+            food = weight * .05;
+        } else if (5 < weight <= 10) {
+            food = weight * .04;
+        } else if (10 < weight <= 15) {
+            food = weight * .03;
+        } else {
+            food = weight * .02;
+        }
+    } else { // age is < 1, therefore dog is a puppy
+        months = age * 12;
+        if (2 <= months < 4) {
+            food = weight * .10;
+        } else if (4 <= months < 7) {
+            food = weight * .05;
+        } else if (7 <= months < 12) {
+            food = weight * .04;
+        } else {
+            food = 0;
+            console.log("The dog is younger than 2 months and gets milk.")
+        } 
+    }
+
+    return food;
+}
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
